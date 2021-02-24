@@ -34,5 +34,44 @@ namespace WebApi.Controllers
             PizzaService.Save(pizza);
             return Ok();
         }
+
+        [HttpGet]
+        public List<Pizza> listaPizza()
+        {
+            var list = PizzaService.GetAll();
+            return list;
+
+        }
+
+        [HttpGet]
+        public List<Ingrediente> listaIngrediente()
+        {
+            var list = IngredienteService.GetAll();
+            return list;
+
+        }
+
+        [HttpGet]
+        public List<Pedido> listaPedido()
+        {
+            var list = PedidoService.GetAll();
+            return list;
+
+        }
+        [HttpGet]
+        public List<DetallePedido> listaDeallePedido()
+        {
+            var list = DetallePedidoService.GetAll();
+            return list;
+
+        }
+        [HttpGet]
+        public List<Factura> listaFactura()
+        {
+            var list = FacturaService.GetAll();
+            return list;
+
+        }
+        
     }
 }
